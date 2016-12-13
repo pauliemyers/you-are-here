@@ -11,7 +11,7 @@ var counter = frameCount;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  player = createSprite(((window.innerWidth)/2), ((window.innerHeight)/2), 64, 64);
+  player = createSprite(((window.innerWidth)/2), (((window.innerHeight)/2) - 100), 64, 64);
   console.log("I made a player!");
   player.addAnimation("standing", "assets/charwalk0000.png");
   console.log("I made the standing image!");
@@ -37,7 +37,7 @@ function setup() {
   player.setCollider("rectangle", 0, 0, 56, 56);
   
   platform = createSprite(((window.innerWidth)/2), ((window.innerHeight)/2), 800, 100);
-  platform.setCollider("rectangle", 0, 0, 744, 100);
+  platform.setCollider("rectangle", 0, 0, 800, 100);
 }
 
 function draw() {
