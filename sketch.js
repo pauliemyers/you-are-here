@@ -6,6 +6,8 @@ var jump = -4;
 
 var grounded = false;
 
+var counter = frameCount;
+
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -32,10 +34,10 @@ function setup() {
   player.addAnimation("lookdown03", "assets/charlookdown0003.png");
   player.addAnimation("lookdown04", "assets/charlookdown0004.png");
   
-  player.setCollider("rectangle", 0, 0, 56, 56);
+  player.setCollider("rectangle", 0, -28, 56, 10);
   
   platform = createSprite(800, 450, 800, 100);
-  platform.setCollider("rectangle", 0, 0, 800, 100);
+  platform.setCollider("rectangle", 0, 50, 744, 10);
 }
 
 function draw() {
