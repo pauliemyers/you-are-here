@@ -37,7 +37,7 @@ function setup() {
   player.setCollider("rectangle", 0, 0, 56, 56);
   
   platform = createSprite(800, 450, 800, 100);
-  platform.setCollider("rectangle", 0, 0, 744, 100);
+  platform.setCollider("rectangle", 0, 50, 744, 10);
 }
 
 function draw() {
