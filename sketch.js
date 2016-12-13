@@ -34,7 +34,7 @@ function setup() {
   player.addAnimation("lookdown03", "assets/charlookdown0003.png");
   player.addAnimation("lookdown04", "assets/charlookdown0004.png");
   
-  player.setCollider("rectangle", 0, -28, 56, 10);
+  player.setCollider("rectangle", 0, 0, 56, 10);
   
   platform = createSprite(((window.innerWidth)/2), ((window.innerHeight)/2), 800, 100);
   platform.setCollider("rectangle", 0, 0, 744, 10);
