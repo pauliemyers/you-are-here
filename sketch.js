@@ -6,6 +6,8 @@ var jump = -4;
 
 var grounded = false;
 
+var counter = frameCount;
+
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -35,7 +37,7 @@ function setup() {
   player.setCollider("rectangle", 0, 0, 56, 56);
   
   platform = createSprite(800, 450, 800, 100);
-  platform.setCollider("rectangle", 0, 0, 800, 100);
+  platform.setCollider("rectangle", 0, 0, 744, 100);
 }
 
 function draw() {
