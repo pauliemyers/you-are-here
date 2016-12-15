@@ -55,7 +55,7 @@ function preload() {
   player.setCollider(0, 0, 56, 56);
   
   //platform loaded last to ensure it appears "above" any other sprites
-  platform = createSprite(1500, 550, 2975, 75);
+  platform = createSprite(1470, 550, 2975, 75);
   platform.setCollider(-100, 0, 2975, 75);
   platform.addImage(floorimage);
   
@@ -78,7 +78,7 @@ function preload() {
   player.addAnimation("sitatend", "assets/charlookdown0005.png");
   
   //text loaded last and modified using depth property
-  endtext = createSprite(2960, 200, 800, 600);
+  endtext = createSprite(2930, 200, 800, 600);
   endtext.addImage(textimage);
   endtext.depth = -5;
  
@@ -90,7 +90,7 @@ function setup() {
   //initialize the number-based variables
   jump = -4;
   gravity = .0875;
-  walkspeed = 1.5;
+  walkspeed = 10;
   endsit = false;
   
   //initialize the p5 oscillator
@@ -127,19 +127,19 @@ function draw() {
 }
 
 function cameraCheck() {
-	if(player.position.x > 450 && player.position.x < 2850) {
+	if(player.position.x > 450 && player.position.x < 2820) {
 		camera.position.x = player.position.x;
 	}
   if(player.position.x < 0) player.position.x = 0;
-  if(player.position.x >= 2800) {
+  if(player.position.x >= 2770) {
   	endtext.depth = 5;
   }
 }
 
 function preCheck() {
-	if (player.position.x < 2800 && 400 < player.position.y < 500) checkIt();
-	else if (player.position.x < 2950 && player.position.x >= 2800) checkWalk();
-	else if (player.position.x >= 2950) endGame();
+	if (player.position.x < 2770 && 400 < player.position.y < 500) checkIt();
+	else if (player.position.x < 2920 && player.position.x >= 2770) checkWalk();
+	else if (player.position.x >= 2920) endGame();
 }
 
 
@@ -175,11 +175,11 @@ function checkIt() {
 
 function endGame() {
 	gravity = 0;
-	if (player.position.x < 2993) {
+	if (player.position.x < 2963) {
 		player.changeAnimation("walking");
 		player.setSpeed(0.5, 0);
 	}
-	if(player.position.x >= 2993) {
+	if(player.position.x >= 2963) {
 		player.setSpeed(0, 0);
 		player.depth = 10
 		player.position.y = 480;
