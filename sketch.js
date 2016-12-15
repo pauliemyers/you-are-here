@@ -90,7 +90,7 @@ function setup() {
   //initialize the number-based variables
   jump = -4;
   gravity = .0875;
-  walkspeed = 10;
+  walkspeed = 1.5;
   endsit = false;
   
   //initialize the p5 oscillator
