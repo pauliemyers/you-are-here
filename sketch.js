@@ -131,7 +131,7 @@ function cameraCheck() {
 		camera.position.x = player.position.x;
 	}
   if(player.position.x < 0) player.position.x = 0;
-  if(player.position.x >= 2770) {
+  if(player.position.x >= 2820) {
   	endtext.depth = 5;
   }
 }
